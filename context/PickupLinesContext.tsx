@@ -1,7 +1,4 @@
-import { createContext, Dispatch, SetStateAction } from 'react';
+'use client'
+import { createContext } from "react";
 
-// Define the type for the context value
-type PickupLineContextType = [string[], Dispatch<SetStateAction<string[]>>];
-
-// Create context with an initial value of an empty array and a no-op function
-export const PickupLineContext = createContext<PickupLineContextType>([[], () => {}]);
+export const PickupLineContext = createContext(null)
