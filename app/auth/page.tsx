@@ -9,6 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 const page = () => {
     const handleLoginWithOAuth = async () => {
         const supabase = supabaseBrowser();
+        console.log(process.env.NEXT_PUBLIC_VERCEL_URL
+        )
         const data = await supabase.auth.signInWithOAuth({
             provider: 'google', options: { redirectTo:`${process.env.NEXT_PUBLIC_VERCEL_URL}/auth/callback` }
         })

@@ -10,8 +10,8 @@ export async function GET(request: Request) {
     const supabase = supabaseServer()
     const { error } = await supabase.auth.exchangeCodeForSession(code)
     if (!error) {
-      return NextResponse.redirect(`${origin}${"/generate"}`)
+      return NextResponse.redirect(`${process.env.NEXT_PUBLIC_VERCEL_URL}${"/generate"}`)
     }
   }
-  return NextResponse.redirect(`${origin}/auth/auth-code-error`)
+  return NextResponse.redirect(`${process.env.NEXT_PUBLIC_VERCEL_URL}/auth/auth-code-error`)
 }
