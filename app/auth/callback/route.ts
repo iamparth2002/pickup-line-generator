@@ -10,7 +10,7 @@ export async function GET(request: Request) {
     const supabase = supabaseServer()
     const { error } = await supabase.auth.exchangeCodeForSession(code)
     if (!error) {
-      return NextResponse.redirect(`${process.env.NEXT_PUBLIC_VERCEL_URL}${"/generate"}`)
+      return NextResponse.redirect(`${"https://pickup-line-generator-project.vercel.app/generate"}`)
     }
   }
   return NextResponse.redirect(`${process.env.NEXT_PUBLIC_VERCEL_URL}/auth/auth-code-error`)
