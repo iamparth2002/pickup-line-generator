@@ -10,7 +10,7 @@ const page = () => {
     const handleLoginWithOAuth = async () => {
         const supabase = supabaseBrowser();
         const data = await supabase.auth.signInWithOAuth({
-            provider: 'google', options: { redirectTo: 'https://pickup-line-generator-project.vercel.app/auth/callback' }
+            provider: 'google', options: { redirectTo: `${process.env.NEXT_PUBLIC_VERCEL_APP}/auth/callback` }
         })
         console.log({ data })
     }
