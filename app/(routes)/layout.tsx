@@ -1,16 +1,20 @@
 'use client'
 import { PickupLineContext } from '@/context/PickupLinesContext';
+import React, { useState, ReactNode } from 'react';
 
-import React, { useState } from 'react';
+// Define the type for the component props
+type LayoutProps = {
+  children: ReactNode;
+};
 
-const layout = ({ children }) => {
-  const [pickupLines, setPickupLines] = useState([]);
+const Layout = ({ children }: LayoutProps) => {
+  const [pickupLines, setPickupLines] = useState<string[]>([]);
 
   return (
-    <PickupLineContext.Provider value={[ pickupLines, setPickupLines ]}>
+    <PickupLineContext.Provider value={[pickupLines, setPickupLines]}>
       <div>{children}</div>
     </PickupLineContext.Provider>
   );
 };
 
-export default layout;
+export default Layout;

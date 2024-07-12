@@ -10,9 +10,9 @@ const page = () => {
     const handleLoginWithOAuth = async () => {
         const supabase = supabaseBrowser();
         const data = await supabase.auth.signInWithOAuth({
-            provider: 'google', options: { redirectTo: `${process.env.NEXT_PUBLIC_VERCEL_APP}/auth/callback` }
+            provider: 'google', options: { redirectTo:`${process.env.NEXT_PUBLIC_VERCEL_URL}/auth/callback` }
         })
-        console.log({ data })
+    
     }
     return (
 
