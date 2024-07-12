@@ -8,7 +8,7 @@ const replicate = new Replicate({
 // In production and preview deployments (on Vercel), the VERCEL_URL environment variable is set.
 // In development (on your local machine), the NGROK_HOST environment variable is set.
 const WEBHOOK_HOST = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
+  ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}`
   : process.env.NGROK_HOST;
 
 export async function POST(request) {
