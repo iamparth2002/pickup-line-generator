@@ -9,7 +9,7 @@ export default function Home() {
   const router = useRouter()
   return (
     <div
-      className="relative overflow-hidden rounded-lg bg-hero-pattern bg-cover bg-no-repeat p-12 text-center h-screen bg-center"
+      className="relative overflow-hidden bg-hero-pattern bg-cover bg-no-repeat p-12 text-center h-screen bg-center"
       style={{ backgroundImage: `url(${hero})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div
         className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
