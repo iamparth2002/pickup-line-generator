@@ -21,9 +21,8 @@ export default function Home() {
 
             <button
               type="button"
-              className=" border-2 py-2 px-4 2xl:py-2 2xl:px-6 -mt-44 2xl:-mt-32 mr-6 2xl:mr-5 rounded-full text-2xl lg:text-3xl flex gap-4 items-center bg-primary leading-loose text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
-              data-twe-ripple-init
-              data-twe-ripple-color="light"
+              className=" border-2 py-2 px-4 2xl:py-2 2xl:px-6 -mt-44 2xl:-mt-32 mr-6 2xl:mr-5 rounded-full text-2xl lg:text-3xl flex gap-4 items-center bg-primary leading-loose text-neutral-50 transition duration-150 ease-in-out  hover:bg-opacity-75  focus:outline-none"
+            
               onClick={() => router.push('/generate')}>
               <IoHeartSharp size={20} />
               Generate one for me
